@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "24bc8c66-412b-48d3-9305-bc47d33810b3",
+		"name": "CONSUMER-APIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7308478"
+	},
+	"item": [
+		{
+			"name": "cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/todos",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consumidor reactivo solo con webClient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9095/api/client/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9095",
+					"path": [
+						"api",
+						"client",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
