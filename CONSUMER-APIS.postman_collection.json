@@ -27,7 +27,7 @@
 			"response": []
 		},
 		{
-			"name": "consumidor reactivo solo con webClient",
+			"name": "consumidor reactivo solo con webClient - Todos",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -42,6 +42,50 @@
 						"api",
 						"client",
 						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "poner en cache",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9095/api/client/upcache/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9095",
+					"path": [
+						"api",
+						"client",
+						"upcache",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recoger de cache",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9095/api/client/todos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9095",
+					"path": [
+						"api",
+						"client",
+						"todos",
+						"1"
 					]
 				}
 			},
