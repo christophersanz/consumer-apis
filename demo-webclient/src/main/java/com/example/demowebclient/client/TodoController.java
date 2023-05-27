@@ -36,18 +36,18 @@ public class TodoController {
     }
 
     @GetMapping(path = "/upcache/{id}")
-    public Mono<TodoResponse> getUno(@PathVariable("id") Long id) throws InterruptedException {
+    public Mono<TodoResponse> getUno(@PathVariable("id") Long id) {
         Mono<TodoResponse> mono = client.getTodo(id);
         ponerEnCache(mono);
         return mono;
     }
 
-    public Disposable ponerEnCache (Mono<TodoResponse> mono) {
+    private Disposable ponerEnCache(Mono<TodoResponse> mono) {
         return mono
-            .subscribe(response -> {
+            .doOnSuccess(response -> {
                 valor = response.getTitle();
                 todoResponse = response;
-            });
+            }).subscribe();
     }
 
 }
